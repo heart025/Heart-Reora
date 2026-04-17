@@ -1,102 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
+            margin: 20px;
+            line-height: 1.6;
         }
-        .calculator {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        nav a {
+            margin-right: 5px;
+            color: blue;
         }
-        #display {
-            width: 100%;
-            height: 60px;
-            font-size: 24px;
-            text-align: right;
-            margin-bottom: 15px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
+        h1, h2 {
+            color: black;
         }
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        input, textarea {
+            display: block;
+            margin: 5px 0;
+            padding: 8px;
+            width: 300px;
         }
         button {
-            padding: 15px;
-            font-size: 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #444;
-            color: white;
-        }
-        button:hover {
-            background-color: #555;
-        }
-        .operator {
-            background-color: #ff9500;
-        }
-        .equal {
-            background-color: #007aff;
+            padding: 8px 15px;
         }
     </style>
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" readonly>
-        <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="appendValue('/')">/</button>
-            <button onclick="appendValue('*')">*</button>
-            <button onclick="appendValue('-')">-</button>
-            
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button onclick="appendValue('+')">+</button>
-            
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button class="equal" onclick="calculateResult()">=</button>
-            
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button onclick="appendValue('0')">0</button>
-        </div>
-    </div>
 
-    <script>
-        const display = document.getElementById('display');
+    <h1>Heart M. Reora</h1> <!--Heart M. Reora
+    <p>Web Developer | Student</p>
 
-        function appendValue(value) {
-            display.value += value;
-        }
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-        function clearDisplay() {
-            display.value = '';
-        }
+    <section id="home">
+        <h2>Welcome</h2>
+        <p>Hello! I'm Heart, a student from Cavite State University.</p> <!-- Palitan mo dito ng Name mo -->
+        <button>View More</button>
+    </section>
 
-        function calculateResult() {
-            try {
-                display.value = eval(display.value);
-            } catch (error) {
-                display.value = 'Error';
-            }
-        }
-    </script>
+    <section id="about">
+        <h2>About Me</h2>
+        <ul>
+            <li>Nationality: Filipino</li>
+            <li>Birthday: July 25 2005</li>
+            <li>Place of Birth: Busac Oas albay</li>
+            <li>Age: 20</li>
+            <li>Status: Single</li>
+            <li>Religion: Catholic</li>
+        </ul>
+    </section>
+
+    <section id="resume">
+        <h2>Educational Background</h2>
+
+        <h3>College</h3>
+        <p>Cavite State University - Tanza Campus</p>
+        <p>2023 - Present</p>
+
+        <h3>Senior High School</h3>
+        <p>Tanza National trade school</p>
+        <p>Taon: 2021-2023</p>
+
+        <h3>Secondary</h3>
+        <p>Tanza National Trade School</p>
+        <p>Taon: 2017-2021</p>
+
+        <h3>Primary</h3>
+        <p>Busac Elementary School</p>
+        <p>Taon: 2012-2017</p>
+
+        <br>
+        <button>Download CV</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: reora.heart@cvsu.edu.ph</p>
+        <p>Phone: 09100793473</p>
+
+        <form>
+            <input type="text" placeholder="Heart M Reora">
+            <input type="email" placeholder="reora.heart@cvsu.edu.ph">
+            <textarea placeholder="Message" rows="4"></textarea>
+            <button type="button">Send</button>
+        </form>
+    </section>
+
 </body>
 </html>
-
